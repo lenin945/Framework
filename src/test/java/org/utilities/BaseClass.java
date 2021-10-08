@@ -197,6 +197,9 @@ public class BaseClass {
 	public static void switchToFrame(WebElement ref) {
 		driver.switchTo().frame(ref);
 	}
+	public static void defaultWindow() {
+		driver.switchTo().defaultContent();
+	}
 	
 	//select class
 	public static void isMultipleDropdown(WebElement ref) {
@@ -276,12 +279,12 @@ public class BaseClass {
 	public static void takeSnap(WebElement ref,String imageName) throws IOException {
 		TakesScreenshot tk= (TakesScreenshot) driver;
 		File src = tk.getScreenshotAs(OutputType.FILE);
-		File des=new File("C:\\Users\\Satz\\eclipse-workspace\\Framework\\Screenshots\\"+imageName+".png");
+		File des=new File("C:\\Users\\lenin\\OneDrive\\Documents\\GIt_Cloning\\Framework\\Screenshots\\"+imageName+".png");
 		FileUtils.copyFile(src, des);
 	}
 	//Datadriven
 	public static String getExcelData(String sheetname,int rowNumber,int columnNumber) throws IOException {
-	File f=new File("C:\\Users\\Satz\\eclipse-workspace\\Framework\\Data\\Login_Details.xlsx");
+	File f=new File("C:\\Users\\lenin\\OneDrive\\Documents\\GIt_Cloning\\Framework\\Data\\Login_Details.xlsx");
 	FileInputStream fIn= new FileInputStream(f);
 	
 	Workbook w=new XSSFWorkbook(fIn);
@@ -311,7 +314,7 @@ public class BaseClass {
 }
 	  public static void insertCellValue(String sheetname,int rowNumber,int cellNumber,String value) throws IOException {
 			
-			File f=new File("C:\\Users\\Satz\\eclipse-workspace\\Framework\\Data\\Login_Details.xlsx");
+			File f=new File("C:\\Users\\lenin\\OneDrive\\Documents\\GIt_Cloning\\Framework\\Data\\Login_Details.xlsx");
 			FileInputStream fIn=new FileInputStream(f);
 			Workbook w=new XSSFWorkbook(fIn);
 			Sheet sh = w.getSheet(sheetname);

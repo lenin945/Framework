@@ -3,6 +3,7 @@ package org.pageobjectmodel;
 import java.io.IOException;
 
 import org.adactinPOJO.BookHotelPage;
+import org.adactinPOJO.BookingConfirmationPage;
 import org.adactinPOJO.LoginPage;
 import org.adactinPOJO.SearchHotelPage;
 import org.adactinPOJO.SelectHotelPage;
@@ -13,12 +14,12 @@ public class Ques6 extends  BaseClass{
 		launchChrome();
 		winMax();
 		launchUrl("http://adactinhotelapp.com/");
+		waitsec(20);
 		LoginPage l=new LoginPage();
 		
 		insertValues(l.getUsrnme(), getExcelData("adactin_login_details", 1, 0));
 		insertValues(l.getPasswd(), getExcelData("adactin_login_details", 1, 1));
 		btnClick(l.getLoginbtn());
-		waitsec(2);
 		
 		SearchHotelPage s=new SearchHotelPage();
 		selectValue(s.getLoc(), getExcelData("adactin_login_details",1,2));
@@ -30,12 +31,10 @@ public class Ques6 extends  BaseClass{
 		selectValue(s.getAdultrm(), getExcelData("adactin_login_details",1,8));
 		selectValue(s.getChildrm(), getExcelData("adactin_login_details",1,9));
 		btnClick(s.getSubmitBtn());
-		waitsec(2);
 		
 		SelectHotelPage sl=new SelectHotelPage();
 		btnClick(sl.getSelectHotel());
 		btnClick(sl.getCont());
-		waitsec(2);
 		
 		BookHotelPage b=new BookHotelPage();
 		insertValues(b.getFirstnm(), getExcelData("adactin_login_details", 1, 10));
@@ -48,12 +47,10 @@ public class Ques6 extends  BaseClass{
 		insertValues(b.getCc_cvv(), getExcelData("adactin_login_details", 1, 17));
 	
 		btnClick(b.getBook_now());
-		waitsec(2);
 		
-		printAttribute(b.getOrder_no(), "value");
-		waitsec(2);
-		btnClick(b.getLogoutbtn());
-		waitsec(2);
+		BookingConfirmationPage bc=new BookingConfirmationPage();
+		printAttribute(bc.getOrderNo(), "value");
+		btnClick(bc.getLogOut());
 		closeBrowser();
 	}
 }
