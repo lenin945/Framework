@@ -3,6 +3,7 @@ package org.java_unit;
 import java.awt.AWTException;
 import java.io.IOException;
 import org.adactinPOJO.BookHotelPage;
+import org.adactinPOJO.BookingConfirmationPage;
 import org.adactinPOJO.LoginPage;
 import org.adactinPOJO.SearchHotelPage;
 import org.adactinPOJO.SelectHotelPage;
@@ -85,9 +86,9 @@ public class Ques8 extends BaseClass{
 	}
 	@Test
 	public void tc5() {
-		BookHotelPage b=new BookHotelPage();
+		BookingConfirmationPage bc =new BookingConfirmationPage();
 		System.out.print("Order No: ");
-		printAttribute(b.getOrder_no(), "value");
+		printAttribute(bc.getOrderNo(), "value");
 	}
 	
 }

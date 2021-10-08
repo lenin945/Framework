@@ -15,7 +15,9 @@ public class Ques3_3 extends BaseClass{
 		mouseOver(g.getCourses());
 		mouseOver(g.getJavatrain());
 		mouseOver(g.getJavacoretrain());
-		btnClick(g.getJavacoretrain());
+		leftclick(g.getJavacoretrain());  
+		
+		//btnClick(g.getJavacoretrain());
 		waitsec(2);
 		printText(g.getPrintnote3());
 		closeBrowser();

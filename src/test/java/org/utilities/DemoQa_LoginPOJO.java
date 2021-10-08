@@ -12,6 +12,9 @@ public class DemoQa_LoginPOJO extends BaseClass{
 		PageFactory.initElements(driver, this);
 	}
 	
+	@FindBy(xpath="(//li[@id='item-0'])[2]")
+	private WebElement btnForm;
+	
 	@FindBy(id="firstName")
 	private WebElement firstName;
 	
@@ -37,12 +40,12 @@ public class DemoQa_LoginPOJO extends BaseClass{
 	@FindBy(xpath="//select[@class='react-datepicker__month-select']")
 	private WebElement month;
 	
-	@FindBy(xpath="//div[@class='react-datepicker__day react-datepicker__day--010']")
+	@FindBy(xpath="//div[text()='19']")
 	private WebElement day;
 	
 	@CacheLookup
 	@FindAll({
-	@FindBy(id="subjectsContainer"),
+	@FindBy(xpath="//*[@id='subjectsInput']"),
 	@FindBy(className=" css-2b097c-container"),
 	@FindBy(xpath="//div[@class='subjects-auto-complete__control css-yk16xz-control']")
 	})
@@ -57,10 +60,13 @@ public class DemoQa_LoginPOJO extends BaseClass{
 	@FindBy(xpath="//label[text()='Music']")
 	private WebElement musicHobby;
 	
+	@FindBy(xpath="//input[@type='file']")
+	private WebElement selectPicture;
+	
 	@FindBy(xpath="//textarea[@id='currentAddress']")
 	private WebElement address;
 	
-	@FindBy(xpath="//div[text()='Select State']")
+	@FindBy(xpath="//*[@id='react-select-3-input']']")
 	private WebElement state;
 	
 	@FindBy(xpath="//div[text()='Select City']")
@@ -69,7 +75,14 @@ public class DemoQa_LoginPOJO extends BaseClass{
 	@FindBy(id="submit")
 	private WebElement submit;
 	
-	@FindBy(tagName="iframe")
+	@FindBy(xpath="//button[text()='Close']")
+	private WebElement close;
+	
+	public WebElement getClose() {
+		return close;
+	}
+
+	@FindBy(xpath="(//iframe)[1]")
 	private WebElement givenDetails;
 	
 	@FindBy(xpath="//a[@id='close-fixedban']")
@@ -150,4 +163,15 @@ public class DemoQa_LoginPOJO extends BaseClass{
 	public WebElement getSubmit() {
 		return submit;
 	}
+
+	public WebElement getBtnForm() {
+		return btnForm;
+	}
+	
+	public WebElement getSelectPicture() {
+		return selectPicture;
+	}
+
+	
+	
 }
