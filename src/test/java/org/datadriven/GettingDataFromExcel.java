@@ -16,7 +16,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class GettingDataFromExcel {
 	public static void main(String[] args) throws IOException {
 		
-	File f=new File("C:\\Users\\Satz\\eclipse-workspace\\Framework\\Data\\Login_Details.xlsx");
+	File f=new File("C:\\Users\\lenin\\OneDrive\\Documents\\GIt_Cloning\\Framework\\Data\\Login_Details.xlsx");
 	FileInputStream fIn=new FileInputStream(f);
 	Workbook w=new XSSFWorkbook(fIn);
 	

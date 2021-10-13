@@ -88,7 +88,8 @@ public class Ques8 extends BaseClass{
 	public void tc5() {
 		BookingConfirmationPage bc =new BookingConfirmationPage();
 		System.out.print("Order No: ");
-		printAttribute(bc.getOrderNo(), "value");
+		String orderID = getAttribute(bc.getOrderNo());
+		System.out.println(orderID);
 	}
 	
 }

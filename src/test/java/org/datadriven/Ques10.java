@@ -76,7 +76,8 @@ public static void main(String[] args) throws IOException, AWTException, Interru
 	pageTitle();
 	WebElement orderno = locateWebelement(By.name("order_no"));
 	
-	printAttribute(orderno, "value");
+	String orderID = getAttribute(orderno);
+	System.out.println(orderID);
 	closeBrowser();
 	
 }}

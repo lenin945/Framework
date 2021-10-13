@@ -15,6 +15,8 @@ public class Ques7 extends BaseClass {
 		
 		String title = driver.getTitle();
 		
+		System.out.println(title);
+		
 		insertValues(txtuser, getExcelData("fb_login_details", 1, 0));
 		insertValues(txtpass, getExcelData("fb_login_details", 1, 1));
 		
@@ -22,10 +24,12 @@ public class Ques7 extends BaseClass {
 		System.out.println(txtpass.getAttribute("value"));
 		
 		btnClick(clicklogin);
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		String title1 = driver.getTitle();
 		
-		if (title1.equals(title)) {
+		System.out.println(title1);
+		
+		if (title1.contains(title)) {
 			insertCellValue("fb_login_details", 1, 2, "fail");
 		}
 		else {

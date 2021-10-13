@@ -23,12 +23,12 @@ public class SearchHotelPage extends BaseClass{
 	private WebElement roomnos;
 	@FindAll({
 		@FindBy(name="datepick_in"),
-		@FindBy(xpath="//input[@class='date_pick']")
+		@FindBy(xpath="(//input[@class='date_pick'])[1]")
 	})
 	private WebElement chkin;
 	
 	@FindAll({
-		@FindBy(xpath="//input[@class='date_pick']"),
+		@FindBy(xpath="(//input[@class='date_pick'])[2]"),
 		@FindBy (name="datepick_out")
 	})
 	private WebElement chkout;

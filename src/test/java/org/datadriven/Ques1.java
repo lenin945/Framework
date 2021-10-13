@@ -12,19 +12,20 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class Ques1 {
 	
 public static void main(String[] args) throws IOException {
-	int sum=0;
 	
-	File f=new File("C:\\Users\\Satz\\eclipse-workspace\\Framework\\Data\\Login_Details.xlsx");
+	
+	File f=new File("C:\\Users\\lenin\\OneDrive\\Documents\\GIt_Cloning\\Framework\\Data\\Login_Details.xlsx");
 	
 	FileInputStream filein =new FileInputStream(f);
 	
 	Workbook w=new XSSFWorkbook(filein);
 	
-	Sheet sh = w.getSheet("ques1to3");
+	Sheet sh = w.getSheet("DD_ques1to3");
 	
 	int rownum = sh.getPhysicalNumberOfRows();
-	System.out.println("Total No of Cells: "+rownum);
-	
+	System.out.println("Total No of rows: "+rownum);
+
+	int sum=0;
 	for (int i = 0; i < rownum ; i++) {
 		
 		Row row = sh.getRow(i);

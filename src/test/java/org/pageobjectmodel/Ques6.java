@@ -49,7 +49,8 @@ public class Ques6 extends  BaseClass{
 		btnClick(b.getBook_now());
 		
 		BookingConfirmationPage bc=new BookingConfirmationPage();
-		printAttribute(bc.getOrderNo(), "value");
+		String orderID = getAttribute(bc.getOrderNo());
+		System.out.println(orderID);
 		btnClick(bc.getLogOut());
 		closeBrowser();
 	}
