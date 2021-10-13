@@ -66,8 +66,15 @@ public class DemoQa_LoginPOJO extends BaseClass{
 	@FindBy(xpath="//textarea[@id='currentAddress']")
 	private WebElement address;
 	
-	@FindBy(xpath="//*[@id='react-select-3-input']']")
+	public WebElement getTxtState() {
+		return txtState;
+	}
+
+	@FindBy(xpath="(//*[@class='css-19bqh2r'])[1]")
 	private WebElement state;
+	
+	@FindBy(xpath="(//*[@class=' css-1wa3eu0-placeholder'])[1]")
+	private WebElement txtState;
 	
 	@FindBy(xpath="//div[text()='Select City']")
 	private WebElement city;

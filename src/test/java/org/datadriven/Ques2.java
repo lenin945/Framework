@@ -13,27 +13,25 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class Ques2 {
 public static void main(String[] args) throws IOException {
 	
-	File f=new File("C:\\Users\\Satz\\eclipse-workspace\\Framework\\Data\\Login_Details.xlsx");
+	File f=new File("C:\\Users\\lenin\\OneDrive\\Documents\\GIt_Cloning\\Framework\\Data\\Login_Details.xlsx");
 	
 	FileInputStream filein=new FileInputStream(f);
 	
 	Workbook w=new XSSFWorkbook(filein);
 	
-	Sheet sh = w.getSheet("ques1to3");
+	Sheet sh = w.getSheet("DD_ques1to3");
 	
-	int rownum = sh.getPhysicalNumberOfRows();
-	
-	for (int i = 0; i < rownum; i++) {
+	for (int i = 0; i < sh.getPhysicalNumberOfRows(); i++) {
 		
 		Row row = sh.getRow(i);
-		
-		int cellnum = row.getPhysicalNumberOfCells();
-		
-		for (int j = 0; j < cellnum ; j++) {
+				
+		for (int j = 0; j < row.getPhysicalNumberOfCells(); j++) {
 			
 			Cell cell = row.getCell(j);
-			System.out.println(cell);
+			System.out.print(cell);
+			System.out.print(" ");
 		}
+		System.out.println();
 	}
 }
 }

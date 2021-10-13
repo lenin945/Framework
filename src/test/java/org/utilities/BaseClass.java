@@ -77,8 +77,9 @@ public class BaseClass {
 	public static void printText(WebElement ref) {
 		System.out.println(ref.getText());
 	}
-	public static void printAttribute(WebElement ref, String value) {
-		System.out.println(ref.getAttribute(value));
+	public static String getAttribute(WebElement e) {
+		return e.getAttribute("value");
+
 	}
 	
 	
@@ -295,7 +296,7 @@ public class BaseClass {
 	
 	int cellType = cell.getCellType();
 	
-	String value = "";
+	String value = null;
 	if (cellType==1) {
 		value = cell.getStringCellValue();
 	}

@@ -24,11 +24,11 @@ public static void main(String[] args) throws IOException, AWTException {
 	WebElement number = locateWebelement(By.name("number"));
 	WebElement city = locateWebelement(By.xpath("(//input[@placeholder='Tell us about your current city'])[1]"));
 	
-	insertValues(name, getExcelData("naukri_login_details", 1, 0));
-	insertValues(email, getExcelData("naukri_login_details", 1, 1));
-	insertValues(pass, getExcelData("naukri_login_details", 1, 2));
-	insertValues(number, getExcelData("naukri_login_details", 1, 3));
-	insertValues(city, getExcelData("naukri_login_details", 1, 4));
+	insertValues(name, getExcelData("naukri_reg_details", 1, 0));
+	insertValues(email, getExcelData("naukri_reg_details", 1, 1));
+	insertValues(pass, getExcelData("naukri_reg_details", 1, 2));
+	insertValues(number, getExcelData("naukri_reg_details", 1, 3));
+	insertValues(city, getExcelData("naukri_reg_details", 1, 4));
 	downKey();
 	enterKey();
 	
