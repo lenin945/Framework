@@ -8,6 +8,7 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.utilities.BaseClass;
 import org.utilities.FlipkartLoginPage;
 
@@ -47,6 +48,10 @@ public class Ques4 extends BaseClass{
 		
 		if (!loginPageTitle.equals(homePageTitle)) {
 			System.out.println("Login Successful"+"\n"+"The entered credentials are correct!");
+			mouseOver(locateWebelement(By.xpath("(//div[@class='_28p97w'])[1]")));
+			//mouseOver(locateWebelement(By.xpath("//*[text()='Logout']")));
+			//leftclick(locateWebelement(By.xpath("//*[text()='Logout']")));
+			btnClick(locateWebelement(By.xpath("//*[text()='Logout']")));
 		}else {
 			System.out.println("Login Unsuccessful"+"\n"+"The entered credentials are not correct!Pls Check");
 		}

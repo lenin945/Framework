@@ -38,8 +38,8 @@ public class Ques8 extends BaseClass{
 	public void tc1() throws IOException {
 		launchUrl("http://www.adactin.com/HotelApp");
 		LoginPage l=new LoginPage();
-		insertValues(l.getUsrnme(), getExcelData("adactin_login_details", 1, 0));
-		insertValues(l.getPasswd(), getExcelData("adactin_login_details", 1, 1));
+		insertValues(l.getUsrnme(), getExcelData("adactin_login_details", 2, 0));
+		insertValues(l.getPasswd(), getExcelData("adactin_login_details", 2, 1));
 		btnClick(l.getLoginbtn());
 		waitsec(2);
 	}
@@ -51,11 +51,11 @@ public class Ques8 extends BaseClass{
 		selectValue(s.getRoomtype(), getExcelData("adactin_login_details", 1, 4));
 		selectValue(s.getRoomnos(), getExcelData("adactin_login_details", 1, 5));
 		
-		clearText(s.getChkin());
-		jsInsertvalue(s.getChkin(), "20/10/2021");
-		clearText(s.getChkout());
-		btnClick(s.getChkin());selectAll();deleteKey();
-		jsInsertvalue(s.getChkout(), "22/10/2021");
+		//clearText(s.getChkin());
+		//jsInsertvalue(s.getChkin(), "20/10/2021");
+		//clearText(s.getChkout());
+		//btnClick(s.getChkin());selectAll();deleteKey();
+		//jsInsertvalue(s.getChkout(), "22/10/2021");
 		
 		selectValue(s.getAdultrm(), getExcelData("adactin_login_details", 1, 8));
 		selectValue(s.getChildrm(), getExcelData("adactin_login_details", 1, 9));

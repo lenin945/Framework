@@ -50,7 +50,7 @@ public class Ques1 extends BaseClass{
 
 	@AfterClass
 	public static void quitbrowser() {
-		closeBrowser();
+//		closeBrowser();
 	}
 
 	}
