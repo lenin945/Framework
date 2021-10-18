@@ -21,7 +21,7 @@ public class Ques5 extends BaseClass{
 	public static void quitBrowser() {
 		//closeBrowser();
 	}
-	@Ignore
+	//@Ignore
 	@Test
 	public void tc1() {
 		launchUrl("https://demoqa.com/automation-practice-form");
@@ -37,17 +37,18 @@ public class Ques5 extends BaseClass{
 	public void tc2() throws AWTException {
 		launchUrl("https://demoqa.com/automation-practice-form");
 		DemoQa_LoginPOJO d=new DemoQa_LoginPOJO();
-		btnClick(d.getDOB());selectAll();
-		insertValues(d.getDOB(), "20 Sep 1998");
-		enterKey();
+		//btnClick(d.getDOB());selectAll();
+		//insertValues(d.getDOB(), "20 Sep 1998");
+		//enterKey();
 		btnClick(d.getCloseAd());
 		waitsec(2);
 		insertValues(d.getSubject(), "E");enterKey();
+		waitsec(2);
 		insertValues(d.getSubject(), "C");enterKey();
 		
 		//scrollDown(d.getSubmit());
 	}
-	@Ignore
+	//@Ignore
 	@Test
 	public void tc3() {
 		DemoQa_LoginPOJO d=new DemoQa_LoginPOJO();
@@ -55,7 +56,7 @@ public class Ques5 extends BaseClass{
 		btnClick(d.getSportsHobby());btnClick(d.getReadingHobby());btnClick(d.getMusicHobby());
 		insertValues(d.getAddress(), "2/24,sankarlal street,Chrompet");
 	}
-	@Ignore
+	//@Ignore
 	@Test
 	public void tc4() throws AWTException {
 		DemoQa_LoginPOJO d=new DemoQa_LoginPOJO();
@@ -67,7 +68,7 @@ public class Ques5 extends BaseClass{
 		downKey();enterKey();
 		btnClick(d.getSubmit());
 	}
-	@Ignore
+	//@Ignore
 	@Test
 	public void tc5() throws IOException {
 		DemoQa_LoginPOJO d=new DemoQa_LoginPOJO();
